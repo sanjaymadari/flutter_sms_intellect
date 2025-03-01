@@ -27,7 +27,8 @@ apply plugin: "kotlin-android"
 android {
     namespace = "com.sanjaymadari.flutter_sms_intellect"
 
-    compileSdk = 35
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

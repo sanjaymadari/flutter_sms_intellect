@@ -5,7 +5,7 @@ homepage: https://github.com/sanjaymadari/flutter_sms_intellect
 
 environment:
   sdk: ^3.7.0
-  flutter: '>=3.3.0'
+  flutter: '>=3.0.0'
 
 dependencies:
   flutter:
@@ -37,6 +37,7 @@ flutter:
       android:
         package: com.sanjaymadari.flutter_sms_intellect
         pluginClass: FlutterSmsIntellectPlugin
+        kotlinPluginClass: FlutterSmsIntellectPlugin
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

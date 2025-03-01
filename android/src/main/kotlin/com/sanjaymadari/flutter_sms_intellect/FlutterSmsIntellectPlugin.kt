@@ -52,7 +52,7 @@ import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
 import java.util.*
 
-class FlutterSmsInboxPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
+class FlutterSmsIntellectPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
   private lateinit var channel : MethodChannel
   private lateinit var context: Context
   private var activity: Activity? = null
