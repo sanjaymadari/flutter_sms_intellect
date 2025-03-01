@@ -1,6 +1,6 @@
 name: flutter_sms_intellect
 description: "A modern Flutter plugin to access SMS inbox on Android devices."
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/sanjaymadari/flutter_sms_intellect
 
 # Environment constraints for the package
