@@ -1,14 +1,6 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
 
-import 'flutter_sms_intellect_platform_interface.dart';
-
-class FlutterSmsIntellect {
-  Future<String?> getPlatformVersion() {
-    return FlutterSmsIntellectPlatform.instance.getPlatformVersion();
-  }
-}
-
 class SmsMessage {
   final String address;
   final String body;
