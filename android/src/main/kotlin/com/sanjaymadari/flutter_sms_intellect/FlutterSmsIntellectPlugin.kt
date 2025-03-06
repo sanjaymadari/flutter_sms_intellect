@@ -168,14 +168,20 @@ class FlutterSmsIntellectPlugin: FlutterPlugin, MethodCallHandler, ActivityAware
         val readIndex = it.getColumnIndex(Telephony.Sms.READ)
         val typeIndex = it.getColumnIndex(Telephony.Sms.TYPE)
 
+        val utcFormat = java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US)
+        utcFormat.timeZone = java.util.TimeZone.getTimeZone("UTC")
+
         var counter = 0
         while (it.moveToNext()) {
           if (count != null && counter >= count) break
+
+          val dateMillis = if (dateIndex >= 0) it.getLong(dateIndex) else 0
+          val dateUtc = utcFormat.format(java.util.Date(dateMillis))
           
           val message = mapOf(
             "address" to (if (addressIndex >= 0) it.getString(addressIndex) else ""),
             "body" to (if (bodyIndex >= 0) it.getString(bodyIndex) else ""),
-            "date" to (if (dateIndex >= 0) it.getLong(dateIndex) else 0),
+            "date" to dateUtc,  // Now in UTC string format
             "read" to (if (readIndex >= 0) it.getInt(readIndex) == 1 else false),
             "type" to (if (typeIndex >= 0) getSmsTypeName(it.getInt(typeIndex)) else "")
           )
