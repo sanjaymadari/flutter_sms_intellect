@@ -14,5 +14,5 @@ Add `flutter_sms_intellect` to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  flutter_sms_intellect: ^0.0.1
+  flutter_sms_intellect: ^0.0.2
 ```
