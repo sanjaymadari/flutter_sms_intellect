@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
 import 'dart:async';
 
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_sms_intellect/flutter_sms_intellect.dart';
 
@@ -34,7 +34,7 @@ class _MyAppState extends State<MyApp> {
         _isLoading = false;
       });
     } on PlatformException catch (e) {
-      print('Failed to check permissions: ${e.message}');
+      debugPrint('Failed to check permissions: ${e.message}');
       setState(() {
         _isLoading = false;
       });
@@ -53,7 +53,7 @@ class _MyAppState extends State<MyApp> {
         _isLoading = false;
       });
     } on PlatformException catch (e) {
-      print('Failed to request permissions: ${e.message}');
+      debugPrint('Failed to request permissions: ${e.message}');
       setState(() {
         _isLoading = false;
       });
@@ -96,7 +96,7 @@ class SmsInboxPage extends StatefulWidget {
   const SmsInboxPage({super.key});
 
   @override
-  _SmsInboxPageState createState() => _SmsInboxPageState();
+  State<SmsInboxPage> createState() => _SmsInboxPageState();
 }
 
 class _SmsInboxPageState extends State<SmsInboxPage> {

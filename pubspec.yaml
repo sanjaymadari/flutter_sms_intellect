@@ -1,7 +1,9 @@
 name: flutter_sms_intellect
 description: "A modern Flutter plugin to access SMS inbox on Android devices."
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/sanjaymadari/flutter_sms_intellect
+repository: https://github.com/sanjaymadari/flutter_sms_intellect
+issue_tracker: https://github.com/sanjaymadari/flutter_sms_intellect/issues
 
 # Environment constraints for the package
 environment:
@@ -11,12 +13,11 @@ environment:
 dependencies:
   flutter:              # Flutter SDK dependency
     sdk: flutter
-  plugin_platform_interface: ^2.0.2  # For plugin interface definitions
 
 dev_dependencies:
   flutter_test:         # Testing framework
     sdk: flutter
-  flutter_lints: ^5.0.0 # Linting rules for Flutter
+  flutter_lints: ^6.0.0 # Linting rules for Flutter
 
 # Flutter-specific configuration
 flutter:
@@ -26,7 +27,6 @@ flutter:
       android:
         package: com.sanjaymadari.flutter_sms_intellect  # Android package name
         pluginClass: FlutterSmsIntellectPlugin          # Java/Kotlin plugin class
-        kotlinPluginClass: FlutterSmsIntellectPlugin    # Kotlin-specific plugin class
 
 # For generic Dart pubspec information, see:
 # https://dart.dev/tools/pub/pubspec
